@@ -207,15 +207,14 @@ body {
 
 
 
-
-
-/* Для найменших екранів (iPhone SE, 320px ширина) */
 @media (max-width: 320px) {}
 
-/* Для середніх екранів (iPhone 12/13, 375px ширина) */
-@media (max-width: 375px) {}
+@media (max-width: 375px) {
+    .bottom-logos {
+        gap: 6px;
+    }
+}
 
-/* Для великих екранів (iPhone 14 Plus/Pro Max, 428px ширина) */
 @media (max-width: 428px) {}
 
 @media all and (max-height: 790px) {
