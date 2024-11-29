@@ -243,6 +243,7 @@ body {
     .logo {
         width: 86px;
         height: 56px;
+        min-height: 56px;
         font-size: 19px;
     }
 
