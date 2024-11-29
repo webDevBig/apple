@@ -200,8 +200,9 @@ body {
 }
 #ip-address{
     margin: 0 0 0 3px;
-    display: -webkit-box;
+    /* display: -webkit-box; */
     -webkit-box-orient: vertical;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
