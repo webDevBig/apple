@@ -195,7 +195,10 @@ body {
     animation: fillBar 5s linear forwards;
 }
 #ip-address{
-
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @keyframes fillBar {
