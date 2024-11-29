@@ -130,6 +130,7 @@ body {
 
 .screen-4 .text {
     width: 100%;
+    max-width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -196,12 +197,12 @@ body {
     animation: fillBar 5s linear forwards;
 }
 
-/* #ip-address{
-    -webkit-box-orient: vertical;
+#ip-address{
+    /* -webkit-box-orient: vertical; */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-} */
+}
 .text span {
     margin: 0 0 0 3px;
 }
