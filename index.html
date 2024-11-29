@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple-like Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-contant">
+        <div class="logo">Logo</div>
+
+        <div class="contant">
+            <div class="screen-1">
+                <div class="text">A little text here</div>
+                <button class="button" id="nextBtn">Button with text</button>
+            </div>
+            <div class="screen-2">
+                <div class="headline-text">Headline text</div>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner"></div>
+                </div>
+                <div class="description-text">Description <br> text</div>
+            </div>
+            <div class="screen-3">
+                <div class="logo">Logo</div>
+                <div class="headline-text">Headline text</div>
+                <div class="description-text">Description <br> text</div>
+                <a href="" class="button">Button with text</a>
+            </div>
+
+        </div>
+
+        <div class="bottom-logos">
+            <div class="logo-box">logo</div>
+            <div class="logo-box">logo</div>
+            <div class="logo-box">logo</div>
+            <div class="logo-box">logo</div>
+            <div class="logo-box">logo</div>
+            <div class="logo-box">logo</div>
+            <div class="logo-box">logo</div>
+            <div class="logo-box">logo</div>
+        </div>
+    </div>
+
+    <script>
+        // Get the elements
+        const nextBtn = document.getElementById('nextBtn');
+        const screen1 = document.querySelector('.screen-1');
+        const screen2 = document.querySelector('.screen-2');
+        const screen3 = document.querySelector('.screen-3');
+        const progressBarInner = document.querySelector('.progress-bar-inner');
+
+        // Hide screen 2 and 3 initially
+        screen2.style.display = 'none';
+        screen3.style.display = 'none';
+
+        // Step 1: Transition to screen-2 on button click
+        nextBtn.addEventListener('click', () => {
+            screen1.style.display = 'none';
+            screen2.style.display = 'flex';
+
+             // Start the progress bar animation
+             progressBarInner.classList.add('animate');
+            progressBarInner.addEventListener('animationend', transitionToScreen3);
+        });
+
+        // Step 2: Animate progress bar
+        function startProgressBar() {
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    transitionToScreen3();
+                } else {
+                    width++;
+                    progressBarInner.style.width = width + '%';
+                }
+            }, 50); // Progress bar takes 5 seconds to fill
+        }
+
+        // Step 3: Transition to screen-3 after progress bar is full
+        function transitionToScreen3() {
+            screen2.style.display = 'none';
+            screen3.style.display = 'flex';
+        }
+        
+    </script>
+</body>
+
+</html>

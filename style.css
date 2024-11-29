@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #1C1C1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.main-contant {
+    width: 100vw;
+    max-width: 430px;
+    height: 100vh;
+    /* background-image: url(./1.png); */
+    background-position: 50% 1px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0px 18px;
+}
+
+.logo {
+    width: 90px;
+    height: 68px;
+    border: 2.5px solid black;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.text {
+    text-align: center;
+    font-size: 27px;
+}
+
+.headline-text {
+    text-align: center;
+    font-size: 27px;
+}
+
+.description-text {
+    text-align: left;
+    font-size: 27px;
+    line-height: 1.4;
+}
+
+.contant {
+    margin: auto 0 220px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.screen-1 {
+    margin: 38px 0 0;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.screen-2 {
+    width: 100%;
+    margin: 80px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px 145px;
+}
+
+.screen-3 {
+    width: 100%;
+    min-height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+}
+
+.screen-3 .headline-text {
+    margin: 42px 0 53px;
+}
+
+.screen-3 .button {
+    margin: 90px 0 0;
+}
+
+.screen-4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    margin: 0 0 -98px;
+}
+
+.screen-4 .headline-text {
+    margin: 42px 0 53px;
+}
+
+.screen-4 .button {
+    margin: 30px 0 0;
+}
+
+.screen-4 .text {
+    width: 100%;
+    text-align: left;
+}
+
+.button {
+    background-color: #007AFF;
+    border: 2px solid #007AFF;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px 28px;
+    font-size: 27px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #005BB5;
+}
+
+.bottom-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bottom-logos .logo-box {
+    width: 85px;
+    height: 66px;
+    border: 2.5px solid black;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #E5E5EA;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 45px 0 60px;
+    position: relative;
+}
+
+.progress-bar-inner {
+    width: 0%;
+    height: 100%;
+    background-color: #007AFF;
+    transition: width 5s linear;
+}
+
+.progress-bar-inner.animate {
+    animation: fillBar 5s linear forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* Для найменших екранів (iPhone SE, 320px ширина) */
+@media (max-width: 320px) {}
+
+/* Для середніх екранів (iPhone 12/13, 375px ширина) */
+@media (max-width: 375px) {}
+
+/* Для великих екранів (iPhone 14 Plus/Pro Max, 428px ширина) */
+@media (max-width: 428px) {}
+
+@media all and (max-height: 740px) {
+    .contant {
+        margin: auto 0 40px;
+    }
+
+    .screen-3 .button,
+    .screen-4 .button {
+        margin: 30px 0 0;
+        font-size: 23px;
+    }
+
+    .screen-3 .headline-text,
+    .screen-4 .headline-text {
+        margin: 30px 0 32px;
+        font-size: 24px;
+    }
+
+    .screen-3 .description-text,
+    .screen-4 .description-text {
+        font-size: 24px;
+    }
+
+    .screen-4 .text {
+        font-size: 24px;
+    }
+
+    .logo {
+        width: 86px;
+        height: 56px;
+        font-size: 19px;
+    }
+
+    .bottom-logos .logo-box {
+        width: 86px;
+        height: 56px;
+        font-size: 19px;
+    }
+
+    .screen-2 {
+        padding: 0 28px 70px;
+    }
+
+    .progress-bar {
+        margin: 30px 0;
+    }
+
+}
+
+@media all and (max-height:650px) {
+
+    .text,
+    .headline-text,
+    .description-text,
+    .button {
+        font-size: 20px;
+    }
+
+    .screen-4 {
+        margin: 0px 0 -25px;
+    }
+
+    .screen-3 .button,
+    .screen-4 .button,
+    .screen-3 .headline-text,
+    .screen-4 .headline-text,
+    .screen-3 .description-text,
+    .screen-4 .description-text {
+        font-size: 20px;
+    }
+
+    .screen-4 .text {
+        font-size: 20px;
+
+    }
+}
+
+@media all and (max-height: 600px) {
+
+    .screen-2 {
+        margin: 54px 0 0;
+    }
+
+}
