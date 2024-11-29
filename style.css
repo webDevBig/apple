@@ -44,6 +44,10 @@ body {
     justify-content: center;
     font-size: 25px;
 }
+.second-logo{
+    display: none;
+    margin: 30px 0 0;
+}
 
 .text {
     text-align: center;
@@ -62,38 +66,42 @@ body {
 }
 
 .contant {
-    margin: auto 0 220px;
+    margin: auto 0;
     width: 100%;
     max-width: 100%;
+    height: calc(100% - 122px - 56px);
 }
 
 .screen-1 {
-    margin: 38px 0 0;
-    height: 190px;
+    /* margin: 38px 0 0; */
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .screen-2 {
     width: 100%;
+    height: 100%;
     margin: 80px 0 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 0 28px 145px;
 }
 
 .screen-3 {
     width: 100%;
+    height: 100%;
     min-height: 275px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0 28px;
+    padding: 0px 28px;
+    
 }
 
 .screen-3 .headline-text {
@@ -137,6 +145,7 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-decoration: none;
+    margin: 60px 0 0;
 }
 
 .button:hover {
@@ -207,9 +216,6 @@ body {
 @media (max-width: 428px) {}
 
 @media all and (max-height: 740px) {
-    .contant {
-        margin: auto 0 40px;
-    }
 
     .screen-3 .button,
     .screen-4 .button {
@@ -251,23 +257,33 @@ body {
     .progress-bar {
         margin: 30px 0;
     }
-    .screen-4{
+
+    .screen-4 {
         margin: 0;
     }
 
 }
 
 @media all and (max-height:650px) {
-    .main-contant{
+    .main-contant {
         padding: 15px 0px;
     }
+
     .logo {
         width: 86px;
-        height: 45px;
+        height: 50px;
+        min-height: 50px;
         font-size: 19px;
     }
+    .second-logo {
+        margin: 18px 0 0;
+    }
+    .bottom-logos .logo-box {
+        height: 50px;
+    }
+
     .screen-4 .headline-text {
-        margin: 20px 0;
+        margin: 20px 0 15px;
     }
 
     .text,
@@ -294,6 +310,7 @@ body {
         font-size: 19px;
 
     }
+
     .screen-4 .button {
         margin: 22px 0 0;
     }

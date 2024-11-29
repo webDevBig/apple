@@ -11,6 +11,7 @@
 <body>
     <div class="main-contant">
         <div class="logo">Logo</div>
+        <div class="logo second-logo">Logo</div>
 
         <div class="contant">
             <div class="screen-1">
@@ -25,7 +26,6 @@
                 <div class="description-text">Description <br> text</div>
             </div>
             <div class="screen-4">
-                <div class="logo">Logo</div>
                 <div class="headline-text">Headline text</div>
                 <div class="description-text">Description <br> text</div>
                 <p class="text">Device name: <span id="device-name"></span></p>
@@ -57,6 +57,7 @@
 
     <script>
         // Get the elements
+        const logo = document.querySelector('.second-logo');
         const nextBtn = document.getElementById('nextBtn');
         const nextBtnScreen = document.getElementById('nextBtn-screen');
         const screen1 = document.querySelector('.screen-1');
@@ -66,6 +67,7 @@
         const progressBarInner = document.querySelector('.progress-bar-inner');
 
         // Hide screen 2, 3, 4 initially
+        logo.style.display = 'none';
         screen2.style.display = 'none';
         screen3.style.display = 'none';
         screen4.style.display = 'none';
@@ -98,11 +100,13 @@
         nextBtnScreen.addEventListener('click', () => {
             screen4.style.display = 'none';
             screen3.style.display = 'flex';
+            logo.style.display = 'none';
         });
 
         function transitionToScreen4() {
             screen2.style.display = 'none';
             screen4.style.display = 'flex';
+            logo.style.display = 'flex';
         }
 
         // Step 4: Transition to screen-3 after progress bar is full
