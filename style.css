@@ -267,7 +267,7 @@ body {
 
 }
 
-@media all and (max-height:650px) {
+@media all and (max-height:670px) {
     .main-contant {
         padding: 15px 0px;
     }
