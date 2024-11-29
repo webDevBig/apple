@@ -217,7 +217,7 @@ body {
 /* Для великих екранів (iPhone 14 Plus/Pro Max, 428px ширина) */
 @media (max-width: 428px) {}
 
-@media all and (max-height: 740px) {
+@media all and (max-height: 790px) {
 
     .screen-3 .button,
     .screen-4 .button {
