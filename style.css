@@ -135,6 +135,9 @@ body {
 .screen-4 .text {
     width: 100%;
     text-align: left;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .button {
@@ -195,12 +198,13 @@ body {
 .progress-bar-inner.animate {
     animation: fillBar 5s linear forwards;
 }
-/* #ip-address{
+#ip-address{
+    margin: 0 0 0 3px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-} */
+}
 
 @keyframes fillBar {
     from {
