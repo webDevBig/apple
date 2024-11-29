@@ -269,8 +269,12 @@ body {
     }
 
 }
-
-@media all and (max-height:700px) {
+@media all and (max-height:700px){
+   .screen-4 .button {
+        margin: 10px 0;
+    }
+}
+@media all and (max-height:640px) {
     .main-contant {
         padding: 15px 0px;
     }
